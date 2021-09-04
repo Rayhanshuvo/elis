@@ -74,6 +74,11 @@
         console.log(clientNow);
     })
 
+
+
+
+
+
     function getData() {
         jQuery("#responseView").show();
         var dep=jQuery("#department").val();
@@ -90,8 +95,10 @@
                 dep:dep
             },
             success: function (response) {
-                jQuery("#responseView").html(response);
-                jQuery("#reportView").html("");
+          jQuery("#responseView").html(response);
+
+
+           jQuery("#reportView").html("");
 //                console.log(response);
             }
         });
@@ -99,6 +106,10 @@
 
 
 </script>
+
+
+
+
 
 
 

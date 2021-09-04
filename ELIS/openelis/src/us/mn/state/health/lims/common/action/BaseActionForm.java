@@ -24,6 +24,7 @@ public class BaseActionForm extends DynaValidatorForm {
 //	private String currentDate = null;
 
 	public BaseActionForm() {
+
 		/*
 		 * System.out.println("Here I am in BaseActionForm "); try {
 		 * System.out.println("This is action form " + getDynaProperty("name")); }

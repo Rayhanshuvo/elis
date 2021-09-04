@@ -166,6 +166,7 @@ function /*void*/ makeDirty(){
 	window.onbeforeunload = formWarning;
 }
 
+
 function savePage() {
     for(i=0; i< <%= resultCount %>; i++) {
         $("abnormalId_" + i).disabled = false;
@@ -175,6 +176,7 @@ function savePage() {
   window.onbeforeunload = null; // Added to flag that formWarning alert isn't needed.
 	var form = window.document.forms[0];
 	form.action = "ResultValidationSave.do?referer=<%=referer%>";
+
 	form.submit();
 }
 

@@ -691,6 +691,8 @@
 
         <action path="/Cancel" forward="homePageDefinition"/>
         <action path="/Dashboard" forward="homePageDefinition"/>
+
+
         <action path="/SamplePatientEntry" name="samplePatientEntryForm"
                 type="us.mn.state.health.lims.sample.action.SamplePatientEntryAction"
                 validate="false"
@@ -698,6 +700,9 @@
             <forward name="success" path="samplePatientEntryDefinition"/>
             <forward name="fail" path="homePageDefinition"/>
         </action>
+
+
+
 
         <action path="/SamplePatientEntrySave" name="samplePatientEntryForm"
                 type="us.mn.state.health.lims.sample.action.SamplePatientEntrySaveAction"
@@ -874,11 +879,20 @@
             <forward name="fail" path="homePageDefinition"/>
         </action>
 
+
+
+
+
         <action path="/ResultValidationForAccessionNumber" name="ResultValidationForm"
                 type="us.mn.state.health.lims.resultvalidation.action.ResultValidationForAccessionNumberAction">
             <forward name="success" path="resultValidationDefinition"/>
+            <forward name="" path="homePageDefinition"/>
             <forward name="fail" path="homePageDefinition"/>
         </action>
+
+
+
+
 
         <action path="/ElisaAlgorithmResultValidation" name="ResultValidationForm"
                 type="us.mn.state.health.lims.resultvalidation.action.ElisaAlgorithmResultValidationAction">
@@ -886,13 +900,20 @@
             <forward name="fail" path="homePageDefinition"/>
         </action>
 
+
+
+
         <action path="/ResultValidationSave" name="ResultValidationForm"
                 type="us.mn.state.health.lims.resultvalidation.action.ResultValidationSaveAction">
             <forward name="success" path="/ResultValidation.do"/>
+            <forward name="pathology" path="/PathologyReport.do"/>
             <forward name="successForAccessionNumber" path="/ResultValidationForAccessionNumber.do"/>
             <forward name="forwardDashboard" path="/LabDashboard.do" redirect="true"/>
             <forward name="fail" path="homePageDefinition"/>
         </action>
+
+
+
 
         <action path="/CancelResultValidation" type="us.mn.state.health.lims.common.action.CommonCancelAction">
             <forward name="success" path="/LabDashboard.do"/>

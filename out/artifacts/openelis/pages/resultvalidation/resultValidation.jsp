@@ -166,6 +166,9 @@ function /*void*/ makeDirty(){
 	window.onbeforeunload = formWarning;
 }
 
+
+
+//web content
 function savePage() {
     for(i=0; i< <%= resultCount %>; i++) {
         $("abnormalId_" + i).disabled = false;
@@ -174,9 +177,14 @@ function savePage() {
     jQuery("#saveButtonId").attr("disabled", "disabled");
   window.onbeforeunload = null; // Added to flag that formWarning alert isn't needed.
 	var form = window.document.forms[0];
+
 	form.action = "ResultValidationSave.do?referer=<%=referer%>";
+	//form.action = "ResultValidationSave.do?referer=<%=referer%>";
 	form.submit();
 }
+
+
+
 
 function toggleSelectAll( element ) {
 

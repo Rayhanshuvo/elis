@@ -56,23 +56,40 @@
                     <span class="badge badge-success btn-xs"> Finalized </span>
                 </c:if>
             </td>
+
+
+
             <td>
+
+
                 <c:if test="${lab.analysisStatus eq '4' && lab.accessionNumber eq null}">
                     <a class="btn btn-link btn-sm" id='result'
                        href="SamplePatientEntry.do?id=<c:out value="${lab.sampleId}"/>&patientId=<c:out value="${lab.stNumber}"/> ">
-                        Sample Collect
+                        Sampleeeeeee Collect
                     </a>
                 </c:if>
+
+
+
+
                 <c:if test="${lab.analysisStatus eq '4' && lab.accessionNumber ne null}">
                     <a class="btn btn-link btn-sm" id='result'
-                       href="AccessionResults.do?accessionNumber=<c:out value="${lab.accessionNumber}"/>&referer=LabDashboard">Enter
-                        Result</a>
+                       href="AccessionResults.do?accessionNumber=<c:out value="${lab.accessionNumber}"/>&referer=PathologyReport">Enter
+                        Result aaaaaaa</a>
                 </c:if>
+
+
+
+
                 <c:if test="${lab.analysisStatus != '4' && lab.analysisStatus != '6' && lab.analysisStatus != '16'}">
                     <a class="btn btn-link btn-sm" id='result'
-                       href="AccessionResults.do?accessionNumber=<c:out value="${lab.accessionNumber}"/>&referer=LabDashboard">Enter
-                        Result</a>
+                       href="AccessionResults.do?accessionNumber=<c:out value="${lab.accessionNumber}"/>&referer=PathologyReport">Enter
+                        Result bbbbbbb</a>
                 </c:if>
+
+
+
+
 
                 <c:if test="${lab.analysisStatus == '16'}">
                     <a class="btn btn-link btn-sm" id='result'
@@ -88,6 +105,12 @@
                     </button>
                 </c:if>
             </td>
+
+
+
+
+
+
         </tr>
     </c:forEach>
 

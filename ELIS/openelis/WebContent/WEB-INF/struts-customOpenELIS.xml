@@ -48,7 +48,11 @@
 
     <action-mappings>
 
+
+
         <!--You will get the page def and name="PathologyReportForm" in tiles-globalOpenELIS.xml and here you will get the page link that is loading-->
+
+
         <action path="/PathologyReport" name="PathologyReportForm"
                 type="us.mn.state.health.lims.customreport.action.PathologyReportAction"
                 validate="false"
@@ -56,6 +60,8 @@
             <forward name="success" path="pathologyReportDefinition"/>
             <forward name="fail" path="homePageDefinition"/>
         </action>
+
+
 
 
 
@@ -93,6 +99,12 @@
         <action path="/AjaxReport" name="AjaxReceiveForm" type="us.mn.state.health.lims.customreport.action.AjaxCustomReportAction">
             <forward name="success"  path="/pages/customreport/ajax.jsp"/>
         </action>
+
+
+
+
+
+
 
         <action path="/AjaxReportView" name="AjaxReceiveForm" type="us.mn.state.health.lims.customreport.action.AjaxCustomReportViewAction">
             <forward name="success"  path="/pages/customreport/ajaxReportView.jsp"/>

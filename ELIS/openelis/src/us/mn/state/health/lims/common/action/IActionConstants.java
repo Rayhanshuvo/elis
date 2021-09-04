@@ -73,12 +73,16 @@ public interface IActionConstants {
 	public static final String FWD_FAIL = "fail";
 	public static final String FWD_VALIDATION_ERROR = "error";
 	public static final String FWD_SUCCESS = "success";
+
+
+
 	public static final String FWD_SUCCESS_INSERT = "insertSuccess";
 	public static final String FWD_NEXT = "next";
 	public static final String FWD_PREVIOUS = "previous";
 	public static final String FWD_SUCCESS_HUMAN = "successHuman";
 	public static final String FWD_SUCCESS_ANIMAL = "successAnimal";
 	public static final String FWD_DASHBOARD = "forwardDashboard";
+	public static final String FWD_PATHOLOGY = "pathology";
 	//bugzilla 2566
 	public static final String FWD_SUCCESS_NEWBORN = "successNewborn";
 	public static final String FWD_FAIL_HUMAN = "failHuman";

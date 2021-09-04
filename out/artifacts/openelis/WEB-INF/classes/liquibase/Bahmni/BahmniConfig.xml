@@ -493,7 +493,11 @@
             <column name="id" valueNumeric=" nextVal( 'menu_seq' ) "/>
             <column name="presentation_order" valueNumeric="2"/>
             <column name="element_id" value="menu_labDashboard"/>
+
+
             <column name="action_url" value="/LabDashboard.do"/>
+
+
             <column name="display_key" value="banner.menu.labdashboard"/>
             <column name="tool_tip_key" value="tooltip.banner.menu.labdashboard"/>
             <column name="new_window" value="f"/>

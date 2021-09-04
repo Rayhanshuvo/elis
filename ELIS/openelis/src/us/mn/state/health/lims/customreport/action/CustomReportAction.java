@@ -38,7 +38,7 @@ public class CustomReportAction extends BaseAction {
 
     @Override
     protected ActionForward performAction(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception, JsonMappingException {
-        String forward = FWD_SUCCESS;
+        String forward = FWD_PATHOLOGY;
         DynaActionForm dynaForm = (DynaActionForm) form;
 
         String accessionNumber = request.getParameter("accessionNumber");
@@ -71,6 +71,9 @@ public class CustomReportAction extends BaseAction {
         List<Order> orderList = orderListDAO.getAllPendingBeforeToday().stream().filter(order -> order.getAccessionNumber().equals(accessionNumber)).collect(Collectors.toList());
         dynaForm.set("orderList", orderList);
         request.setAttribute("listUsers", orderList);
+
+        String className = request.getClass().getSimpleName();
+        System.out.println(className);
 
         return mapping.findForward(forward);
     }

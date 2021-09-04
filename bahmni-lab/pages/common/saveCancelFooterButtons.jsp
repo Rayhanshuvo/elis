@@ -13,6 +13,8 @@
 		<tbody valign="middle">
 			<tr>
 				<td align="right">
+
+
 					<html:button onclick="savePage();"
 						property="save"
 						styleId="saveButtonId"

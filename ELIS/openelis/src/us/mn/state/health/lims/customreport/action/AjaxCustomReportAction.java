@@ -41,6 +41,8 @@ public class AjaxCustomReportAction extends BaseAction {
     protected ActionForward performAction(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception, JsonMappingException {
         DynaActionForm dynaForm = (DynaActionForm) form;
         String forward = FWD_SUCCESS;
+
+
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat _sdf = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -136,6 +138,8 @@ public class AjaxCustomReportAction extends BaseAction {
 //        List<LabTest> alll = labTests.stream().filter(labTest ->)
 
         request.setAttribute("labTests", labTests);
+
+
         return mapping.findForward(forward);
 
     }

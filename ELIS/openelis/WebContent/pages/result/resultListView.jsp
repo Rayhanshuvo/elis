@@ -362,6 +362,9 @@ function setAbnormalValues() {
 }
 
 //this overrides the form in utilities.jsp
+
+
+//hit1
 function  /*void*/ savePage()
 {
     setAbnormalValues();
@@ -373,6 +376,10 @@ function  /*void*/ savePage()
 	form.action = '<%=formName%>'.sub('Form','') + "Update.do?referer=" + '<%= referer %>'  + '<%= logbookType == "" ? "" : "&type=" + logbookType  %>';
 	form.submit();
 }
+
+
+
+
 
 function updateReflexChild( group){
 

@@ -61,7 +61,9 @@ basePath = path + "/";
   
 
 <div>
+
     <div id="todayStat">
+
         <table>
             <tr>
                 <td>

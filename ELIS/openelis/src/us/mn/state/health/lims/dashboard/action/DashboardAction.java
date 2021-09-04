@@ -53,6 +53,10 @@ public class DashboardAction extends BaseAction {
         return mapping.findForward("success");
     }
 
+
+
+
+
     @Override
     protected String getPageTitleKey() {
         return "Dashboard";

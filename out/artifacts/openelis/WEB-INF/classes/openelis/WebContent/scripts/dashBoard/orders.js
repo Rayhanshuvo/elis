@@ -59,8 +59,15 @@ function generateAllLinksForOrder(order, alwaysValidate){
     if(alwaysValidate){
         //TODO: &type= is required in the url because of a bug I can't find the source of. The bug causes people without
         var validateMessage = jQuery("#translatedColumnNames").attr("data-link-validate");
+
+
+
         var validateIcon = '<img id="actionIcon" src="images/validate.svg" title="'+validateMessage+'">';
-        var validationLink = "<a id='validate' href='ResultValidationForAccessionNumber.do?accessionNumber=" + order.accessionNumber + "&patientId=" + order.stNumber + "&referer=LabDashboard&type=&test='>"+validateIcon+"</a>";
+
+
+
+      var validationLink = "<a id='validate' href='ResultValidationForAccessionNumber.do?accessionNumber=" + order.accessionNumber + "&patientId=" + order.stNumber + "&referer=Pathology&type=&test='>"+validateIcon+"</a>";
+/*        var validationLink = "<a id='validate' href='ResultValidationForAccessionNumber.do?accessionNumber=" + order.accessionNumber + "&patientId=" + order.stNumber + "&referer=LabDashboard&type=&test='>"+validateIcon+"</a>";*/
         return enterResultLink + " | " + validationLink + " | " + generateLinkForPrint(order) + " | " + generateLinkForCustomPrint(order);
     }
     return enterResultLink + " | " + generateLinkForPrint(order) +" | " + generateLinkForCustomPrint(order);

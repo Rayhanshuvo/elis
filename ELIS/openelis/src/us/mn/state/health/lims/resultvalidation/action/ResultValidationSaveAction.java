@@ -90,6 +90,7 @@ public class ResultValidationSaveAction extends BaseResultValidationAction {
 			throws Exception {
 
 		String forward = FWD_SUCCESS;
+		String forwardPathology= FWD_PATHOLOGY;
         String referer = request.getParameter("referer");
         String accessionNumber = request.getParameter(ACCESSION_NUMBER);
 
@@ -134,9 +135,13 @@ public class ResultValidationSaveAction extends BaseResultValidationAction {
             throw lre;
 		}
 
-        if(referer != null && referer.matches("LabDashboard")) {
-			return mapping.findForward(FWD_DASHBOARD);
+        if(referer != null && referer.matches("Pathology")) {
+			return mapping.findForward(forwardPathology);
 		}
+
+	/*	if(referer != null && referer.matches("LabDashboard")) {
+			return mapping.findForward(forwardPathology);
+		}*/
 
 		if (GenericValidator.isBlankOrNull(testSectionName)) {
             Map<String, String> params = new HashMap<>();
